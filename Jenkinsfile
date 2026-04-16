@@ -11,14 +11,14 @@ pipeline {
         stage('Faux build') {
             steps {
                 echo 'Je simule un build...'
-                bat 'echo Compilation OK'
+                sh 'echo "Compilation OK"'
             }
         }
 
         stage('Faux test') {
             steps {
                 echo 'Je simule des tests...'
-                bat 'echo Tests passes : 5/5'
+                sh 'echo "Tests passés : 5/5"'
             }
         }
 
