@@ -5,22 +5,20 @@ pipeline {
         stage('Bonjour') {
             steps {
                 echo 'Pipeline démarré !'
-                echo "Branche : ${env.BRANCH_NAME}"
             }
         }
 
         stage('Faux build') {
             steps {
                 echo 'Je simule un build...'
-                sh 'echo "Compilation OK"'
-                sh 'sleep 2'
+                bat 'echo Compilation OK'
             }
         }
 
         stage('Faux test') {
             steps {
                 echo 'Je simule des tests...'
-                sh 'echo "Tests passés : 5/5"'
+                bat 'echo Tests passes : 5/5'
             }
         }
 
